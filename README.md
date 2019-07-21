@@ -41,5 +41,13 @@ git status
 git add .
 git status
 git commit -m "备注"
+(git pull)将远端的代码拉下来
 git push
+
+## 脚本
+
+
+
+
+
 

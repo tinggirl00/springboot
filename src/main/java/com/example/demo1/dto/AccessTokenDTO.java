@@ -1,19 +1,14 @@
 package com.example.demo1.dto;
 
-
 /**
- * 网络层类与类之间传输用dto
- * */
+ * Created by codedrinker on 2019/4/24.
+ */
+
 public class AccessTokenDTO {
-
     private String client_id;
-
     private String client_secret;
-
     private String code;
-
     private String redirect_uri;
-
     private String state;
 
     public String getClient_id() {
@@ -24,7 +19,7 @@ public class AccessTokenDTO {
         this.client_id = client_id;
     }
 
-    public String getClient_secret(String s) {
+    public String getClient_secret() {
         return client_secret;
     }
 
@@ -40,7 +35,7 @@ public class AccessTokenDTO {
         this.code = code;
     }
 
-    public String getRedirect_uri(String s) {
+    public String getRedirect_uri() {
         return redirect_uri;
     }
 
