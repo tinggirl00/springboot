@@ -9,6 +9,7 @@
 [GitHub OAuth授权登录](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)
 https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/
 [MySQL数据库学习](https://www.runoob.com/mysql/mysql-create-tables.html)
+[spring](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
 ##工具
 
 https://git-scm.com/download
@@ -16,6 +17,7 @@ https://git-scm.com/download
 
 [前端框架：使用BootStrap](https://v3.bootcss.com/getting-started/)
 [java模拟post：使用Okhttp](https://square.github.io/okhttp)
+[mybatis](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/index.html)
 
 ## git具体使用
 

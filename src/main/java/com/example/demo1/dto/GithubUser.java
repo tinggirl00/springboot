@@ -1,5 +1,9 @@
 package com.example.demo1.dto;
 
+
+/**
+ * 类与类之间的传输
+ * */
 public class GithubUser {
     private  String name;
     private Long id;
