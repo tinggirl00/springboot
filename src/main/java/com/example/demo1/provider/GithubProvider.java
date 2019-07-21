@@ -1,10 +1,12 @@
 package com.example.demo1.provider;
 
+
 import com.alibaba.fastjson.JSON;
 import com.example.demo1.dto.AccessTokenDTO;
 import com.example.demo1.dto.GithubUser;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 
 /**
@@ -27,6 +29,7 @@ public class GithubProvider {
                 .build();
         try (Response response = client.newCall(request).execute()) {
             String string = response.body().string();
+            System.out.println(string);
             String token = string.split("&")[0].split("=")[1];
             System.out.println(token);
             return token;

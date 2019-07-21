@@ -1,5 +1,9 @@
 package com.example.demo1.model;
 
+
+/**
+ * 数据库之间传输用model
+ * */
 public class User {
 
     private Integer id;

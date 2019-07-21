@@ -1,5 +1,9 @@
 package com.example.demo1.dto;
 
+
+/**
+ * 网络层类与类之间传输用dto
+ * */
 public class AccessTokenDTO {
 
     private String client_id;
