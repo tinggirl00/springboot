@@ -39,6 +39,7 @@ public class GithubProvider {
         try {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
+            //利用fastjson足懂把下划线标识映射到驼峰的属性
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
             return githubUser;
         } catch (Exception e) {

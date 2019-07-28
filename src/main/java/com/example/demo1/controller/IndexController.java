@@ -1,13 +1,12 @@
 package com.example.demo1.controller;
 
-import com.example.demo1.mapper.UserMapper;
-import com.example.demo1.model.User;
+import com.example.demo1.dto.PaginationDTO;
+import com.example.demo1.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Created by codedrinker on 2019/4/24.
@@ -15,24 +14,17 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class IndexController {
 
+
     @Autowired
-    private UserMapper userMapper;
+    private QuestionService questionService;
 
     @GetMapping("/")
-    public String index(HttpServletRequest request) {
-        Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            if(cookie.getName().equals("token")){
-                String token = cookie.getValue();
-                User user = userMapper.findByToken(token);
-                if(user != null){
-                    request.getSession().setAttribute("user",user);
-                }
-                break;
-            }
-        }
+    public String index(Model model,
+                        @RequestParam(name = "page", defaultValue = "1") Integer page,
+                        @RequestParam(name = "size", defaultValue = "5") Integer size) {
 
-
+        PaginationDTO paginationDTO = questionService.list(page, size);
+        model.addAttribute("pagination", paginationDTO);
         return "index";
     }
 }
